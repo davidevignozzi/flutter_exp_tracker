@@ -9,7 +9,9 @@ class inboundButton extends StatelessWidget {
       width: 122.0,
       height: 52.0,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          print("Entrata");
+        },
         child: Text('Entrate'),
         style: ElevatedButton.styleFrom(
             primary: Palette.myBg,

@@ -9,7 +9,9 @@ class plus extends StatelessWidget {
       backgroundColor: Palette.myBg, //Colors.blue,
       foregroundColor: Palette.myWhite, //Colors.red,
       child: Icon(Icons.add),
-      onPressed: () {},
+      onPressed: () {
+        print("+");
+      },
     );
   }
 }

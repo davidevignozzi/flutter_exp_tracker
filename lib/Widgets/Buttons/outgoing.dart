@@ -9,7 +9,9 @@ class outgoingButton extends StatelessWidget {
       width: 122.0,
       height: 52.0,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          print("Uscita");
+        },
         child: Text('Uscite'),
         style: ElevatedButton.styleFrom(
             primary: Palette.myBg,
