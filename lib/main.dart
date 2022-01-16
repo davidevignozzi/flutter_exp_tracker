@@ -1,9 +1,7 @@
+import 'package:exp_tracker/Widgets/Bottom/start.dart';
 import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
 import 'package:exp_tracker/Widgets/Buttons/close.dart';
-import 'package:exp_tracker/Widgets/Buttons/plus.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
-
-import 'package:exp_tracker/Widgets/palette.dart';
 
 import 'package:flutter/material.dart';
 
@@ -23,8 +21,8 @@ class MyApp extends StatelessWidget {
           children: [
             arrow(),
             close(),
-            plus(),
             selectState(),
+            start(),
           ],
         ),
       )),
