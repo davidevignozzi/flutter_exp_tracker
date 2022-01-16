@@ -1,12 +1,13 @@
-import 'package:exp_tracker/Widgets/Buttons/inbound.dart';
-import 'package:exp_tracker/Widgets/Buttons/outgoing.dart';
+import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
 import 'package:exp_tracker/Widgets/Buttons/plus.dart';
+import 'package:exp_tracker/Widgets/Form/select.dart';
+
 import 'package:exp_tracker/Widgets/palette.dart';
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +21,13 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: Column(
-          children: [plus(), inboundButton(), outgoingButton()],
+          children: [
+            arrow(),
+            plus(),
+            // inboundButton(),
+            // outgoingButton(),
+            selectState(),
+          ],
         ),
       ),
       //home: Select(),

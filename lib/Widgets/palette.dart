@@ -1,11 +1,3 @@
-/*
-    const grey = "#B3B2BF";
-    const green = "#00E194";
-    const orange = "#ED8655";
-    const red = "#FB6158";
-    const black = "#363543";
-*/
-
 import 'package:flutter/material.dart';
 
 class Palette {
