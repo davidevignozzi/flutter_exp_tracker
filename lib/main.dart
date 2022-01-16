@@ -1,4 +1,5 @@
 import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
+import 'package:exp_tracker/Widgets/Buttons/close.dart';
 import 'package:exp_tracker/Widgets/Buttons/plus.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         child: Column(
           children: [
             arrow(),
+            close(),
             plus(),
             selectState(),
           ],
