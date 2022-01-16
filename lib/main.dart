@@ -16,20 +16,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Expance Tracker',
-      theme: ThemeData(
-        backgroundColor: Palette.myBg,
-      ),
       home: Scaffold(
-        body: Column(
+          body: SafeArea(
+        child: Column(
           children: [
             arrow(),
             plus(),
-            // inboundButton(),
-            // outgoingButton(),
             selectState(),
           ],
         ),
-      ),
+      )),
       //home: Select(),
     );
   }

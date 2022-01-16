@@ -7,7 +7,7 @@ class plus extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       backgroundColor: Palette.myBg, //Colors.blue,
-      foregroundColor: Palette.myWhite, //Colors.red,
+      foregroundColor: Colors.white, //Colors.red,
       child: Icon(Icons.add),
       onPressed: () {
         print("+");

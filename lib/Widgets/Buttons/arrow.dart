@@ -5,13 +5,12 @@ import 'package:exp_tracker/Widgets/palette.dart';
 class arrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
-      backgroundColor: Palette.myBg, //Colors.blue,
-      foregroundColor: Palette.myWhite, //Colors.red,
-      child: Icon(Icons.add),
-      onPressed: () {
-        print("+");
-      },
+    return IconButton(
+      // icon: IconData(0xe098, fontFamily: 'MaterialIcons'),
+      icon: Icon(Icons.expand_more),
+      color: Palette.myWhite,
+      iconSize: 44,
+      onPressed: () {},
     );
   }
 }
