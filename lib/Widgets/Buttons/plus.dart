@@ -7,6 +7,15 @@ class plus extends StatelessWidget {
     return Container(
       width: 67,
       height: 67,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black,
+              blurRadius: 100,
+              spreadRadius: -15,
+              offset: Offset(0, 7))
+        ],
+      ),
       child: FloatingActionButton(
         backgroundColor: Palette.myBg, //Colors.blue,
         foregroundColor: Colors.white, //Colors.red,

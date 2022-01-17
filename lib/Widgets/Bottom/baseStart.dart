@@ -14,6 +14,13 @@ class base extends StatelessWidget {
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
         ),
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black,
+              blurRadius: 50,
+              spreadRadius: 0,
+              offset: Offset(0, 15))
+        ],
       ),
     );
   }
