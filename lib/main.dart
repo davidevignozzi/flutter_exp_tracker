@@ -31,10 +31,12 @@ class MyApp extends StatelessWidget {
               //close(),
               // selectState(),
               // start(),
+              // --------------------------------------------------------------- Mini Table
               Container(
                 child: miniTable(),
                 margin: EdgeInsets.only(bottom: 30),
               ),
+              // --------------------------------------------------------------- Base
               startBool ? selectState() : start(),
             ],
           ),

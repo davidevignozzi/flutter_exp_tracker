@@ -18,26 +18,7 @@ class formControls extends StatelessWidget {
           Container(
             child: Container(
               margin: EdgeInsets.only(top: 30),
-              child: Row(
-                children: [
-                  // Form Date
-                  formDate(),
-
-                  // Output Date
-                  Container(
-                    margin: EdgeInsets.only(
-                      left: (20),
-                    ),
-                    alignment: Alignment.center,
-                    width: 150,
-                    height: 53,
-                    child: DefaultTextStyle(
-                      child: Text('Data'),
-                      style: TextStyle(color: Palette.myWhite),
-                    ),
-                  ),
-                ],
-              ),
+              child: formDate(),
             ),
             alignment: Alignment.topLeft,
           ),
