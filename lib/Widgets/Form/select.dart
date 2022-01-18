@@ -52,64 +52,72 @@ class select extends State<selectState> {
       child: Column(
         children: [
           arrow(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
+          Container(
+            margin: EdgeInsets.only(top: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
                 // INBOUND
-                width: 122.0,
-                height: 52.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 15,
-                        spreadRadius: -7,
-                        offset: Offset(5, 7))
-                  ],
-                ),
-                child: ElevatedButton(
-                  onPressed: inboundPressed,
-                  child: Text("Entrate"),
-                  style: ElevatedButton.styleFrom(
-                    primary: inboundSelected ? Palette.myGreen : Palette.myBg,
-                    onPrimary: inboundSelected ? Palette.myBg : Palette.myGreen,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                Container(
+                  width: 122.0,
+                  height: 52.0,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 15,
+                          spreadRadius: -7,
+                          offset: Offset(5, 7))
+                    ],
+                  ),
+                  child: ElevatedButton(
+                    onPressed: inboundPressed,
+                    child: Text("Entrate"),
+                    style: ElevatedButton.styleFrom(
+                      primary: inboundSelected ? Palette.myGreen : Palette.myBg,
+                      onPrimary:
+                          inboundSelected ? Palette.myBg : Palette.myGreen,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Container(
+
                 //OUTGOING
-                width: 122.0,
-                height: 52.0,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 15,
-                        spreadRadius: -7,
-                        offset: Offset(5, 7))
-                  ],
-                ),
-                child: ElevatedButton(
-                  onPressed: outgoingPressed,
-                  child: Text("Ucite"),
-                  style: ElevatedButton.styleFrom(
-                    primary: outgoingSelected ? Palette.myOrange : Palette.myBg,
-                    onPrimary:
-                        outgoingSelected ? Palette.myBg : Palette.myOrange,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                Container(
+                  width: 122.0,
+                  height: 52.0,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 15,
+                          spreadRadius: -7,
+                          offset: Offset(5, 7))
+                    ],
+                  ),
+                  child: ElevatedButton(
+                    onPressed: outgoingPressed,
+                    child: Text("Ucite"),
+                    style: ElevatedButton.styleFrom(
+                      primary:
+                          outgoingSelected ? Palette.myOrange : Palette.myBg,
+                      onPrimary:
+                          outgoingSelected ? Palette.myBg : Palette.myOrange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+
           // if something is selected show form
           inboundSelected ? form() : Container(),
+          outgoingSelected ? form() : Container(),
         ],
       ),
     );
