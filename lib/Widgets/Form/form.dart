@@ -9,7 +9,6 @@ class form extends StatelessWidget {
       width: 320,
       height: 300,
       margin: EdgeInsets.only(top: 30),
-      // decoration: BoxDecoration(color: Palette.myOrange),
       child: formControls(),
     );
   }

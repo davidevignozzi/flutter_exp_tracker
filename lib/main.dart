@@ -2,6 +2,7 @@ import 'package:exp_tracker/Widgets/Bottom/start.dart';
 import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
 import 'package:exp_tracker/Widgets/Buttons/close.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
+import 'package:exp_tracker/Widgets/Table/miniTable.dart';
 import 'package:exp_tracker/Widgets/palette.dart';
 
 import 'package:flutter/material.dart';
@@ -32,7 +33,11 @@ class MyApp extends StatelessWidget {
               //close(),
               // selectState(),
               // start(),
-              startBool ? selectState() : selectState(),
+              Container(
+                child: miniTable(),
+                margin: EdgeInsets.only(bottom: 30),
+              ),
+              startBool ? selectState() : start(),
             ],
           ),
         ),

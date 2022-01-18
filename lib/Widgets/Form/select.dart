@@ -32,7 +32,7 @@ class select extends State<selectState> {
 
     return Container(
       width: double.infinity,
-      // if something is selected heigth
+      // if something is selected change heigth
       height: inboundSelected | outgoingSelected ? 475 : 190,
       decoration: BoxDecoration(
         color: Palette.myBg,
@@ -116,8 +116,8 @@ class select extends State<selectState> {
           ),
 
           // if something is selected show form
-          inboundSelected ? form() : Container(),
-          outgoingSelected ? form() : Container(),
+          inboundSelected ? Container(child: form()) : Container(),
+          outgoingSelected ? Container(child: form()) : Container(),
         ],
       ),
     );
