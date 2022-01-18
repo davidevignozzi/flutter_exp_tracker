@@ -1,3 +1,4 @@
+import 'package:exp_tracker/Widgets/Form/formControls.dart';
 import 'package:exp_tracker/Widgets/palette.dart';
 import 'package:flutter/material.dart';
 
@@ -9,24 +10,7 @@ class form extends StatelessWidget {
       height: 300,
       margin: EdgeInsets.only(top: 30),
       decoration: BoxDecoration(color: Palette.myOrange),
-      child: Column(
-        children: [
-          // form start here
-          Form(
-            // movement Name
-            child: TextFormField(
-              style: TextStyle(
-                color: Palette.myWhite,
-              ),
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: 'Nome movimento',
-              ),
-            ),
-          ),
-        ],
-      ),
+      child: formControls(),
     );
   }
 }
