@@ -1,6 +1,4 @@
 import 'package:exp_tracker/Widgets/Bottom/start.dart';
-import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
-import 'package:exp_tracker/Widgets/Buttons/close.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
 import 'package:exp_tracker/Widgets/Table/miniTable.dart';
 import 'package:exp_tracker/Widgets/palette.dart';
