@@ -32,9 +32,8 @@ class select extends State<selectState> {
 
     return Container(
       width: double.infinity,
-      // height: 168,
       // if something is selected heigth
-      height: inboundSelected | outgoingSelected ? 500 : 168,
+      height: inboundSelected | outgoingSelected ? 475 : 190,
       decoration: BoxDecoration(
         color: Palette.myBg,
         borderRadius: BorderRadius.only(
@@ -51,13 +50,14 @@ class select extends State<selectState> {
       ),
       child: Column(
         children: [
+          // ------------------------------------------------------------------- Arrow button
           arrow(),
           Container(
-            margin: EdgeInsets.only(top: 5),
+            margin: EdgeInsets.only(top: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // INBOUND
+                // ------------------------------------------------------------- INBOUND
                 Container(
                   width: 122.0,
                   height: 52.0,
@@ -84,7 +84,7 @@ class select extends State<selectState> {
                   ),
                 ),
 
-                //OUTGOING
+                //-------------------------------------------------------------- OUTGOING
                 Container(
                   width: 122.0,
                   height: 52.0,
