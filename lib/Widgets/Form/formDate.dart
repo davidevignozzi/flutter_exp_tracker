@@ -30,8 +30,8 @@ class formDateState extends State<formDate> {
               DatePicker.showDatePicker(
                 context,
                 showTitleActions: true,
-                // minTime: DateTime(2020, 1, 1),
-                // maxTime: DateTime(2023, 12, 31),
+                minTime: DateTime(2020, 1, 1),
+                maxTime: DateTime(2023, 12, 31),
                 currentTime: DateTime.now(),
                 onConfirm: (dateChanged) {
                   // print('confirm $date');
