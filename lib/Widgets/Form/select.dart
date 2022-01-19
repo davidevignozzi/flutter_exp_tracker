@@ -37,8 +37,8 @@ class select extends State<selectState> {
       decoration: BoxDecoration(
         color: Palette.myBg,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
+          topLeft: Radius.circular(100),
+          topRight: Radius.circular(100),
         ),
         boxShadow: [
           BoxShadow(
