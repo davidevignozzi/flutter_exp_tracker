@@ -1,4 +1,3 @@
-import 'package:exp_tracker/movements.dart';
 import 'package:flutter/material.dart';
 
 class title extends StatelessWidget {

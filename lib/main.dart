@@ -1,13 +1,17 @@
 import 'package:exp_tracker/Widgets/Bottom/start.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
 import 'package:exp_tracker/Widgets/Table/miniTable.dart';
-import 'package:exp_tracker/Widgets/palette.dart';
+import 'package:exp_tracker/Widgets/Table/table.dart';
+import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/movementList.dart';
 import 'package:exp_tracker/title.dart';
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -25,38 +29,39 @@ class MyApp extends StatelessWidget {
         backgroundColor: Palette.myBg,
         body: SafeArea(
           bottom: false,
-          child: Stack(
-            children: [
-              Positioned(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    // --------------------------------------------------------- Title
-                    Container(
-                      child: title(),
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.only(bottom: 20),
-                    ),
-                    // --------------------------------------------------------- Table
+          child: table(),
+          // child: Stack(
+          //   children: [
+          //     Positioned(
+          //       child: Column(
+          //         mainAxisAlignment: MainAxisAlignment.end,
+          //         children: [
+          //           // --------------------------------------------------------- Title
+          //           Container(
+          //             child: title(),
+          //             alignment: Alignment.center,
+          //             margin: EdgeInsets.only(bottom: 20),
+          //           ),
+          //           // --------------------------------------------------------- Table
 
-                    Container(
-                      child: miniTable(),
-                      alignment: Alignment.bottomCenter,
-                      margin: EdgeInsets.only(bottom: 250),
-                    ),
-                  ],
-                ),
-              ),
+          //           Container(
+          //             child: miniTable(),
+          //             alignment: Alignment.bottomCenter,
+          //             margin: EdgeInsets.only(bottom: 250),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
 
-              // --------------------------------------------------------------- Base
-              Positioned(
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: startBool ? selectState() : start(),
-                ),
-              )
-            ],
-          ),
+          //     // --------------------------------------------------------------- Base
+          //     Positioned(
+          //       child: Container(
+          //         alignment: Alignment.bottomCenter,
+          //         child: startBool ? selectState() : start(),
+          //       ),
+          //     )
+          //   ],
+          // ),
         ),
       ),
     );

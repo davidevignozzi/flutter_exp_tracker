@@ -1,5 +1,4 @@
-import 'package:exp_tracker/Widgets/palette.dart';
-import 'package:exp_tracker/movements.dart';
+import 'package:exp_tracker/Style/palette.dart';
 import 'package:flutter/material.dart';
 
 class seeMore extends StatelessWidget {
