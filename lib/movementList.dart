@@ -1,15 +1,15 @@
 import 'dart:developer';
 import 'movement.dart';
 
-List<Movement> movementList = [
+List<Movement> movementsList = [
   Movement(
-      name: 'Regalo',
+      name: 'Entrata',
       date: '03/02/2022',
       import: '100€',
-      inbound: false,
-      outgoing: true),
+      inbound: true,
+      outgoing: false),
   Movement(
-      name: 'Regalo',
+      name: 'Uscita',
       date: '03/02/2022',
       import: '100€',
       inbound: false,

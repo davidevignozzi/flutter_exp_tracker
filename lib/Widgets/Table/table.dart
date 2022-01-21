@@ -1,12 +1,13 @@
-import 'package:exp_tracker/movementList.dart';
+import 'package:exp_tracker/Widgets/Buttons/inbound.dart';
 import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
+import '../../movementList.dart';
 
 class table extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: movementList.length,
+      itemCount: movementsList.length,
       itemBuilder: (BuildContext context, int index) {
         return Container(
           color: Colors.white,
@@ -18,7 +19,7 @@ class table extends StatelessWidget {
                 margin: EdgeInsets.only(top: 21, left: 29),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  '$movementList[index].date',
+                  '${movementsList[index].date}',
                   style: TextStyle(
                       color: Palette.myGrey,
                       fontSize: 14,
@@ -34,7 +35,7 @@ class table extends StatelessWidget {
                     // --------------------------------------------------------- Nome dell'importo
                     Container(
                       child: Text(
-                        'Nome',
+                        '${movementsList[index].name}',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
@@ -44,11 +45,14 @@ class table extends StatelessWidget {
                     // --------------------------------------------------------- Importo
                     Container(
                       child: Text(
-                        '10€',
+                        '${movementsList[index].import}',
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                            color: Palette.myOrange),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          color: movementsList[index].inbound == true
+                              ? Palette.myGreen
+                              : Palette.myOrange,
+                        ),
                       ),
                     ),
                   ],
