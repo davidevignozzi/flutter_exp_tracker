@@ -29,39 +29,38 @@ class MyApp extends StatelessWidget {
         backgroundColor: Palette.myBg,
         body: SafeArea(
           bottom: false,
-          child: table(),
-          // child: Stack(
-          //   children: [
-          //     Positioned(
-          //       child: Column(
-          //         mainAxisAlignment: MainAxisAlignment.end,
-          //         children: [
-          //           // --------------------------------------------------------- Title
-          //           Container(
-          //             child: title(),
-          //             alignment: Alignment.center,
-          //             margin: EdgeInsets.only(bottom: 20),
-          //           ),
-          //           // --------------------------------------------------------- Table
+          child: Stack(
+            children: [
+              Positioned(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    // --------------------------------------------------------- Title
+                    Container(
+                      child: title(),
+                      alignment: Alignment.center,
+                      margin: EdgeInsets.only(bottom: 20),
+                    ),
+                    // --------------------------------------------------------- Table
 
-          //           Container(
-          //             child: miniTable(),
-          //             alignment: Alignment.bottomCenter,
-          //             margin: EdgeInsets.only(bottom: 250),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
+                    Container(
+                      child: miniTable(),
+                      alignment: Alignment.bottomCenter,
+                      margin: EdgeInsets.only(bottom: 250),
+                    ),
+                  ],
+                ),
+              ),
 
-          //     // --------------------------------------------------------------- Base
-          //     Positioned(
-          //       child: Container(
-          //         alignment: Alignment.bottomCenter,
-          //         child: startBool ? selectState() : start(),
-          //       ),
-          //     )
-          //   ],
-          // ),
+              // --------------------------------------------------------------- Base
+              Positioned(
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  child: startBool ? selectState() : start(),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

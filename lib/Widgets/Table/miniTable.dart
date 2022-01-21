@@ -19,8 +19,6 @@ class miniTable extends StatelessWidget {
         child: Column(
           children: [
             item(),
-            item(),
-            item(),
             Spacer(),
             Container(
               margin: EdgeInsets.only(bottom: 5),
