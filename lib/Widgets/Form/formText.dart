@@ -1,7 +1,17 @@
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:flutter/material.dart';
 
-class formText extends StatelessWidget {
+class formText extends StatefulWidget {
+  @override
+  formTextState createState() => new formTextState();
+}
+
+class formTextState extends State<formText> {
+  var name;
+  void setName(name) {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(

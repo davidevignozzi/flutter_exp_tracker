@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
-import 'package:exp_tracker/miniList.dart';
+import '../../movementList.dart';
 
 class item extends StatelessWidget {
   @override

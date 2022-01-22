@@ -2,6 +2,7 @@ import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
 import 'package:exp_tracker/Widgets/Buttons/plus.dart';
 import 'package:exp_tracker/Widgets/Form/form.dart';
 import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/genarlVariables.dart';
 import 'package:flutter/material.dart';
 
 class selectState extends StatefulWidget {
@@ -19,6 +20,9 @@ class select extends State<selectState> {
       setState(() {
         inboundSelected = !inboundSelected;
         outgoingSelected = false;
+        //!GENERAL
+        generalInbound = true;
+        generalOutgoing = false;
       });
     }
 
@@ -27,6 +31,9 @@ class select extends State<selectState> {
       setState(() {
         outgoingSelected = !outgoingSelected;
         inboundSelected = false;
+        //!GENERAL
+        generalOutgoing = true;
+        generalInbound = false;
       });
     }
 

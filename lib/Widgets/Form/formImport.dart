@@ -1,7 +1,18 @@
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:flutter/material.dart';
 
-class formImport extends StatelessWidget {
+class formImport extends StatefulWidget {
+  @override
+  formImportState createState() => new formImportState();
+}
+
+class formImportState extends State<formImport> {
+  var importParsed;
+  var import;
+  void setImport(import) {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(

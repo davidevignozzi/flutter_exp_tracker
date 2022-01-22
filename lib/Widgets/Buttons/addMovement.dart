@@ -1,4 +1,5 @@
 import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/genarlVariables.dart';
 import 'package:flutter/material.dart';
 
 class addMovement extends StatelessWidget {
@@ -17,7 +18,16 @@ class addMovement extends StatelessWidget {
         ],
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          print(generalDate);
+          print(generalDateParsed);
+          print(generalName);
+          print(generalImport);
+          print(generalImportparsed);
+          print(generalInbound);
+          print(generalOutgoing);
+          print(generalTotal);
+        },
         child: Text("Aggiungi"),
         style: ElevatedButton.styleFrom(
           primary: Palette.myBg,

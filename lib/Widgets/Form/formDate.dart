@@ -1,4 +1,5 @@
 import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/genarlVariables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -14,7 +15,12 @@ class formDateState extends State<formDate> {
   var dateString = 'Data';
 
   void changeDate(date) {
-    setState(() => dateString = DateFormat('dd-MM-yyyy').format(date));
+    setState(() {
+      dateString = DateFormat('dd-MM-yyyy').format(date);
+      //! GENERAL
+      generalDateParsed = date;
+      generalDate = dateString;
+    });
   }
 
   @override
