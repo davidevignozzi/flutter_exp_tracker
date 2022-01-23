@@ -9,7 +9,7 @@ class item extends StatelessWidget {
       child: SizedBox(
         height: 240,
         child: ListView.builder(
-          itemCount: miniList.length,
+          itemCount: movementsList.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               child: Column(
@@ -18,7 +18,7 @@ class item extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     margin: EdgeInsets.only(top: 25, left: 29),
                     child: Text(
-                      '${miniList[index].date}',
+                      '${movementsList[index].date}',
                       style: TextStyle(
                           color: Palette.myGrey,
                           fontSize: 14,
@@ -36,7 +36,7 @@ class item extends StatelessWidget {
                       children: [
                         Container(
                           child: Text(
-                            '${miniList[index].name}',
+                            '${movementsList[index].name}',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
@@ -45,11 +45,13 @@ class item extends StatelessWidget {
                         ),
                         Container(
                           child: Text(
-                            '${miniList[index].import}',
+                            '${movementsList[index].import}',
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 18,
-                                color: Palette.myOrange),
+                                color: movementsList[index].inbound == true
+                                    ? Palette.myGreen
+                                    : Palette.myOrange),
                           ),
                         ),
                       ],

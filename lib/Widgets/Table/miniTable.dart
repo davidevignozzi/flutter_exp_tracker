@@ -1,6 +1,5 @@
 import 'package:exp_tracker/Widgets/Buttons/seeMore.dart';
 import 'package:exp_tracker/Widgets/Table/item.dart';
-import 'package:exp_tracker/movement.dart';
 import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
 
