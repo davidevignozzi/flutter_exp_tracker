@@ -2,7 +2,7 @@ var generalDate;
 var generalDateParsed;
 var generalName;
 var generalImport;
-var generalImportparsed;
+var generalImportParsed;
 var generalInbound;
 var generalOutgoing;
 var generalTotal;

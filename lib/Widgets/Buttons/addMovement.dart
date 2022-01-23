@@ -1,5 +1,9 @@
+import 'dart:developer';
+
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/genarlVariables.dart';
+import 'package:exp_tracker/movement.dart';
+import 'package:exp_tracker/movementList.dart';
 import 'package:flutter/material.dart';
 
 class addMovement extends StatelessWidget {
@@ -19,14 +23,18 @@ class addMovement extends StatelessWidget {
       ),
       child: ElevatedButton(
         onPressed: () {
-          print(generalDate);
-          print(generalDateParsed);
-          print(generalName);
-          print(generalImport);
-          print(generalImportparsed);
-          print(generalInbound);
-          print(generalOutgoing);
-          print(generalTotal);
+          var movementToAdd = new Movement(
+            name: generalName,
+            date: generalDate,
+            dateParsed: generalDateParsed,
+            import: generalImport,
+            importParsed: generalImportParsed,
+            inbound: generalInbound,
+            outgoing: generalOutgoing,
+          );
+          movementsList.add(movementToAdd);
+          // print(generalTotal);
+          print(movementsList);
         },
         child: Text("Aggiungi"),
         style: ElevatedButton.styleFrom(

@@ -1,4 +1,5 @@
 import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/genarlVariables.dart';
 import 'package:flutter/material.dart';
 
 class formText extends StatefulWidget {
@@ -7,15 +8,29 @@ class formText extends StatefulWidget {
 }
 
 class formTextState extends State<formText> {
-  var name;
-  void setName(name) {
-    setState(() {});
+  final controller = TextEditingController();
+
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  void setName(_nameValue) {
+    setState(() {
+      generalName = _nameValue;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: TextFormField(
+        controller: controller,
+        textInputAction: TextInputAction.search,
+        onEditingComplete: () {
+          setName(controller.text);
+          print(generalName);
+        },
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           filled: true,
