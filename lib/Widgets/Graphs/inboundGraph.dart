@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/gloabl.dart';
 import 'package:exp_tracker/movementList.dart';
@@ -10,10 +12,22 @@ class inboundGraph extends StatefulWidget {
 
 class _inboundGraphState extends State<inboundGraph> {
   @override
+  var timer;
+  void initState() {
+    timer = Timer.periodic(Duration(seconds: 1), (_) {
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    timer?.cancel();
+  }
+
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        generalTotalInbounds == 0 ? 'Entrate' : generalTotalInbounds.toString(),
+        generalTotalInbounds.toString(),
         style: TextStyle(
           fontWeight: FontWeight.w800,
           fontSize: 18,

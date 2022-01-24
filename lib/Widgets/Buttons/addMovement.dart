@@ -70,8 +70,10 @@ class _addMovementState extends State<addMovement> {
   void getTotalInbounds() {
     setState(() {
       if (movementsList.last.importParsed != null) {
-        generalTotalInbounds +=
-            int.parse(movementsList.last.importParsed.toString());
+        if (movementsList.last.inbound == true) {
+          generalTotalInbounds +=
+              int.parse(movementsList.last.importParsed.toString());
+        }
       }
     });
   }
@@ -80,8 +82,10 @@ class _addMovementState extends State<addMovement> {
   void getTotaloutgoings() {
     setState(() {
       if (movementsList.last.importParsed != null) {
-        generalTotalOutgoings +=
-            int.parse(movementsList.last.importParsed.toString());
+        if (movementsList.last.outgoing == true) {
+          generalTotalOutgoings +=
+              int.parse(movementsList.last.importParsed.toString());
+        }
       }
     });
   }
