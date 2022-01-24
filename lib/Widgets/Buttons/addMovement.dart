@@ -40,10 +40,15 @@ class _addMovementState extends State<addMovement> {
               outgoing: generalOutgoing,
             );
             movementsList.add(movementToAdd);
+            if (movementToAdd.inbound == true &&
+                movementToAdd.outgoing == false) {
+              inbounds.add(movementToAdd);
+            }
+            if (movementToAdd.inbound == false &&
+                movementToAdd.outgoing == true) {
+              outgoings.add(movementToAdd);
+            }
           });
-
-          // print(generalTotal);
-          print(movementsList);
         },
         child: Text("Aggiungi"),
         style: ElevatedButton.styleFrom(

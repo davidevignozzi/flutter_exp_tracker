@@ -2,6 +2,8 @@ import 'package:exp_tracker/Widgets/Bottom/start.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
 import 'package:exp_tracker/Widgets/Table/miniTable.dart';
 import 'package:exp_tracker/Widgets/Table/table.dart';
+import 'Widgets/Graphs/inboundGraph.dart';
+import 'Widgets/Graphs/outgoingsGraph.dart';
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/title.dart';
 
@@ -34,6 +36,13 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: 47),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [inboundGraph(), outgoingGraph()],
+                      ),
+                    ),
                     // --------------------------------------------------------- Title
                     Container(
                       child: title(),
