@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
 import '../../movementList.dart';
 
-class table extends StatelessWidget {
+class table extends StatefulWidget {
+  @override
+  _tableState createState() => _tableState();
+}
+
+class _tableState extends State<table> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

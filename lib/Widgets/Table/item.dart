@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
 import '../../movementList.dart';
 
-class item extends StatelessWidget {
+class item extends StatefulWidget {
+  @override
+  _itemState createState() => _itemState();
+}
+
+class _itemState extends State<item> {
   @override
   Widget build(BuildContext context) {
     return Container(
