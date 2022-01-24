@@ -3,7 +3,6 @@ import 'package:exp_tracker/Widgets/Form/select.dart';
 import 'package:exp_tracker/Widgets/Table/miniTable.dart';
 import 'package:exp_tracker/Widgets/Table/table.dart';
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:exp_tracker/movementList.dart';
 import 'package:exp_tracker/title.dart';
 
 import 'package:flutter/material.dart';

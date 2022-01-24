@@ -2,7 +2,6 @@ import 'package:exp_tracker/Widgets/Buttons/addMovement.dart';
 import 'package:exp_tracker/Widgets/Form/formDate.dart';
 import 'package:exp_tracker/Widgets/Form/formImport.dart';
 import 'package:exp_tracker/Widgets/Form/formText.dart';
-import 'package:exp_tracker/Style/palette.dart';
 import 'package:flutter/material.dart';
 
 class formControls extends StatelessWidget {
