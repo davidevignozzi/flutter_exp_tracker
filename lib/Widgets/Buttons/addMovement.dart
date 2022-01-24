@@ -27,29 +27,7 @@ class _addMovementState extends State<addMovement> {
         ],
       ),
       child: ElevatedButton(
-        onPressed: () {
-          setState(() {
-            movementsList = List.from(movementsList);
-            var movementToAdd = new Movement(
-              name: generalName,
-              date: generalDate,
-              dateParsed: generalDateParsed,
-              import: generalImport,
-              importParsed: generalImportParsed,
-              inbound: generalInbound,
-              outgoing: generalOutgoing,
-            );
-            movementsList.add(movementToAdd);
-            if (movementToAdd.inbound == true &&
-                movementToAdd.outgoing == false) {
-              inbounds.add(movementToAdd);
-            }
-            if (movementToAdd.inbound == false &&
-                movementToAdd.outgoing == true) {
-              outgoings.add(movementToAdd);
-            }
-          });
-        },
+        onPressed: addMovement,
         child: Text("Aggiungi"),
         style: ElevatedButton.styleFrom(
           primary: Palette.myBg,
@@ -60,5 +38,51 @@ class _addMovementState extends State<addMovement> {
         ),
       ),
     );
+  }
+
+  // add new movement
+  void addMovement() {
+    setState(() {
+      movementsList = List.from(movementsList);
+      var movementToAdd = new Movement(
+        name: generalName,
+        date: generalDate,
+        dateParsed: generalDateParsed,
+        import: generalImport,
+        importParsed: generalImportParsed,
+        inbound: generalInbound,
+        outgoing: generalOutgoing,
+      );
+      movementsList.add(movementToAdd);
+      if (movementToAdd.inbound == true && movementToAdd.outgoing == false) {
+        inbounds.add(movementToAdd);
+      }
+      if (movementToAdd.inbound == false && movementToAdd.outgoing == true) {
+        outgoings.add(movementToAdd);
+      }
+    });
+
+    getTotalInbounds();
+    getTotaloutgoings();
+  }
+
+  // get total inbounds
+  void getTotalInbounds() {
+    setState(() {
+      if (movementsList.last.importParsed != null) {
+        generalTotalInbounds +=
+            int.parse(movementsList.last.importParsed.toString());
+      }
+    });
+  }
+
+  // get total outgoings
+  void getTotaloutgoings() {
+    setState(() {
+      if (movementsList.last.importParsed != null) {
+        generalTotalOutgoings +=
+            int.parse(movementsList.last.importParsed.toString());
+      }
+    });
   }
 }

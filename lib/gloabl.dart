@@ -6,3 +6,6 @@ var generalImportParsed;
 var generalInbound;
 var generalOutgoing;
 var generalTotal;
+
+var generalTotalInbounds = 0;
+var generalTotalOutgoings = 0;
