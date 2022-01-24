@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:exp_tracker/genarlVariables.dart';
+import 'package:exp_tracker/gloabl.dart';
 
 import 'movement.dart';
 

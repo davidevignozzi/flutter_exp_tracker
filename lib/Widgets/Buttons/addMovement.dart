@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:exp_tracker/genarlVariables.dart';
+import 'package:exp_tracker/gloabl.dart';
 import 'package:exp_tracker/movement.dart';
 import 'package:exp_tracker/movementList.dart';
 import 'package:flutter/material.dart';

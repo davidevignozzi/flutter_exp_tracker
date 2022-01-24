@@ -1,7 +1,7 @@
 import 'package:exp_tracker/Widgets/Buttons/arrow.dart';
 import 'package:exp_tracker/Widgets/Form/form.dart';
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:exp_tracker/genarlVariables.dart';
+import 'package:exp_tracker/gloabl.dart';
 import 'package:flutter/material.dart';
 
 class selectState extends StatefulWidget {

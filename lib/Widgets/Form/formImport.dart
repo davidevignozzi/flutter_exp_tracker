@@ -1,4 +1,4 @@
-import 'package:exp_tracker/genarlVariables.dart';
+import 'package:exp_tracker/gloabl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
