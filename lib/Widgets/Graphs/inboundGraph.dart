@@ -26,14 +26,17 @@ class _inboundGraphState extends State<inboundGraph> {
 
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        generalTotalInbounds.toString(),
-        style: TextStyle(
-          fontWeight: FontWeight.w800,
-          fontSize: 18,
-          color: Colors.white,
+        child: Column(
+      children: [
+        Text(
+          generalTotalInbounds.toString(),
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            fontSize: 18,
+            color: Colors.white,
+          ),
         ),
-      ),
-    );
+      ],
+    ));
   }
 }
