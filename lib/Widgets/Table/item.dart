@@ -29,7 +29,7 @@ class _itemState extends State<item> {
       child: SizedBox(
         height: 240,
         child: ListView.builder(
-          itemCount: movementsList.length,
+          itemCount: miniList.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               child: Column(
@@ -38,7 +38,7 @@ class _itemState extends State<item> {
                     alignment: Alignment.centerLeft,
                     margin: EdgeInsets.only(top: 25, left: 29),
                     child: Text(
-                      '${movementsList[index].date}',
+                      '${miniList[index].date}',
                       style: TextStyle(
                           color: Palette.myGrey,
                           fontSize: 14,
@@ -56,7 +56,7 @@ class _itemState extends State<item> {
                       children: [
                         Container(
                           child: Text(
-                            '${movementsList[index].name}',
+                            '${miniList[index].name}',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
@@ -65,11 +65,11 @@ class _itemState extends State<item> {
                         ),
                         Container(
                           child: Text(
-                            '${movementsList[index].import}',
+                            '${miniList[index].import}',
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 18,
-                                color: movementsList[index].inbound == true
+                                color: miniList[index].inbound == true
                                     ? Palette.myGreen
                                     : Palette.myOrange),
                           ),

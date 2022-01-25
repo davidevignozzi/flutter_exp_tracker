@@ -53,12 +53,26 @@ class _addMovementState extends State<addMovement> {
         inbound: generalInbound,
         outgoing: generalOutgoing,
       );
+
+      // add to general list
       movementsList.add(movementToAdd);
+
+      // add to inbounds
       if (movementToAdd.inbound == true && movementToAdd.outgoing == false) {
         inbounds.add(movementToAdd);
       }
+
+      // add to outgoings
       if (movementToAdd.inbound == false && movementToAdd.outgoing == true) {
         outgoings.add(movementToAdd);
+      }
+
+      //add to mini list
+      if (miniList.length >= 3) {
+        miniList.removeAt(0);
+        miniList.add(movementToAdd);
+      } else {
+        miniList.add(movementToAdd);
       }
     });
 
