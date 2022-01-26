@@ -11,7 +11,6 @@ class formDate extends StatefulWidget {
 
 class formDateState extends State<formDate> {
   // var maxDate = DateFormat('dd-MM-yyyy').format(DateTime.);
-  var dateSelected;
   var dateString = 'Data';
 
   void changeDate(date) {
@@ -40,7 +39,6 @@ class formDateState extends State<formDate> {
                 maxTime: DateTime(2023, 12, 31),
                 currentTime: DateTime.now(),
                 onConfirm: (dateChanged) {
-                  // print('confirm $date');
                   changeDate(dateChanged);
                   print(dateString);
                 },

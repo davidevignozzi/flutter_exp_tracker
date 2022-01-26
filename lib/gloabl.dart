@@ -11,3 +11,4 @@ var generalTotalInbounds = 0;
 var generalTotalOutgoings = 0;
 
 bool globalStart = true;
+bool globalTable = false;

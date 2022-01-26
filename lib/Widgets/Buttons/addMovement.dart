@@ -42,6 +42,8 @@ class _addMovementState extends State<addMovement> {
   void addMovement() {
     setState(() {
       movementsList = List.from(movementsList);
+
+      // declare new movement
       var movementToAdd = Movement(
         name: generalName,
         date: generalDate,

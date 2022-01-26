@@ -32,47 +32,48 @@ class _homeState extends State<home> {
   }
 
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Stack(
-        children: [
-          Positioned(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+    return Container(
+      child: globalTable == false
+          ? Stack(
               children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 47),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [inboundGraph(), outgoingGraph()],
+                Positioned(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 47),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [inboundGraph(), outgoingGraph()],
+                        ),
+                      ),
+                      // --------------------------------------------------------- Title
+                      Container(
+                        child: title(),
+                        alignment: Alignment.center,
+                        margin: EdgeInsets.only(bottom: 20),
+                      ),
+                      // --------------------------------------------------------- Table
+
+                      Container(
+                        child: miniTable(),
+                        alignment: Alignment.bottomCenter,
+                        margin: EdgeInsets.only(bottom: 250),
+                      ),
+                    ],
                   ),
                 ),
-                // --------------------------------------------------------- Title
-                Container(
-                  child: title(),
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(bottom: 20),
-                ),
-                // --------------------------------------------------------- Table
 
-                Container(
-                  child: miniTable(),
-                  alignment: Alignment.bottomCenter,
-                  margin: EdgeInsets.only(bottom: 250),
-                ),
+                // --------------------------------------------------------------- Base
+                Positioned(
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: globalStart == true ? start() : selectState(),
+                  ),
+                )
               ],
-            ),
-          ),
-
-          // --------------------------------------------------------------- Base
-          Positioned(
-            child: Container(
-              alignment: Alignment.bottomCenter,
-              child: globalStart == true ? start() : selectState(),
-            ),
-          )
-        ],
-      ),
+            )
+          : table(),
     );
   }
 }
