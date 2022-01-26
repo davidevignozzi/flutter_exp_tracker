@@ -18,7 +18,7 @@ class _arrowState extends State<arrow> {
         iconSize: 44,
         onPressed: () {
           setState(() {
-            globalStart = false;
+            globalStart = true;
           });
         },
       ),

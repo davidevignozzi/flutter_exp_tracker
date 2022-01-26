@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 class Movement {
   // Movement({name, date, import, inbound, outgoing});
   Movement({

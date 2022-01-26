@@ -1,5 +1,4 @@
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:exp_tracker/Widgets/Bottom/baseStart.dart';
 import 'package:exp_tracker/Widgets/Buttons/plus.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +23,7 @@ class start extends StatelessWidget {
               ],
             ),
             child: Stack(
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none,
               children: [
                 Positioned(
                   child: plus(),

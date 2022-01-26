@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/gloabl.dart';
 import 'package:exp_tracker/movement.dart';
@@ -44,7 +42,7 @@ class _addMovementState extends State<addMovement> {
   void addMovement() {
     setState(() {
       movementsList = List.from(movementsList);
-      var movementToAdd = new Movement(
+      var movementToAdd = Movement(
         name: generalName,
         date: generalDate,
         dateParsed: generalDateParsed,

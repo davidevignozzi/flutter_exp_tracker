@@ -1,6 +1,3 @@
-import 'dart:developer';
-import 'package:exp_tracker/gloabl.dart';
-
 import 'movement.dart';
 
 List<Movement> movementsList = [];

@@ -1,12 +1,5 @@
-import 'package:exp_tracker/Widgets/Bottom/start.dart';
-import 'package:exp_tracker/Widgets/Form/select.dart';
-import 'package:exp_tracker/Widgets/Table/miniTable.dart';
-import 'package:exp_tracker/Widgets/Table/table.dart';
-import 'package:exp_tracker/gloabl.dart';
-import 'Widgets/Graphs/inboundGraph.dart';
-import 'Widgets/Graphs/outgoingsGraph.dart';
+import 'package:exp_tracker/home.dart';
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:exp_tracker/title.dart';
 
 import 'package:flutter/material.dart';
 
@@ -27,45 +20,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Palette.myBg,
         body: SafeArea(
           bottom: false,
-          child: Stack(
-            children: [
-              Positioned(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: 47),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [inboundGraph(), outgoingGraph()],
-                      ),
-                    ),
-                    // --------------------------------------------------------- Title
-                    Container(
-                      child: title(),
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.only(bottom: 20),
-                    ),
-                    // --------------------------------------------------------- Table
-
-                    Container(
-                      child: miniTable(),
-                      alignment: Alignment.bottomCenter,
-                      margin: EdgeInsets.only(bottom: 250),
-                    ),
-                  ],
-                ),
-              ),
-
-              // --------------------------------------------------------------- Base
-              Positioned(
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: globalStart ? selectState() : start(),
-                ),
-              )
-            ],
-          ),
+          child: home(),
         ),
       ),
     );
