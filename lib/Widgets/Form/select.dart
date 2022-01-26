@@ -39,7 +39,7 @@ class select extends State<selectState> {
     return Container(
       width: double.infinity,
       // if something is selected change heigth
-      height: inboundSelected | outgoingSelected ? 475 : 190,
+      height: inboundSelected || outgoingSelected ? 475 : 190,
       decoration: BoxDecoration(
         color: Palette.myBg,
         borderRadius: BorderRadius.only(
