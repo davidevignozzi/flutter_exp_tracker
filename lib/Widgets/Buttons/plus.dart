@@ -1,7 +1,13 @@
 import 'package:exp_tracker/Style/palette.dart';
+import 'package:exp_tracker/gloabl.dart';
 import 'package:flutter/material.dart';
 
-class plus extends StatelessWidget {
+class plus extends StatefulWidget {
+  @override
+  _plusState createState() => _plusState();
+}
+
+class _plusState extends State<plus> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +26,11 @@ class plus extends StatelessWidget {
         backgroundColor: Palette.myBg, //Colors.blue,
         foregroundColor: Colors.white, //Colors.red,
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            globalStart = false;
+          });
+        },
       ),
     );
   }

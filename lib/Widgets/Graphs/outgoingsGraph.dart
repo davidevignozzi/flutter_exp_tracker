@@ -34,22 +34,33 @@ class _ougoingGraphState extends State<outgoingGraph> {
         child: Column(
       children: [
         Container(
-          width: 120,
-          height: 120,
-          child: SfCircularChart(
-            series: <CircularSeries>[
+            width: 120,
+            height: 120,
+            child: SfCircularChart(annotations: <CircularChartAnnotation>[
+              CircularChartAnnotation(
+                  widget: Container(
+                      child: PhysicalModel(
+                          shape: BoxShape.circle,
+                          elevation: 0,
+                          shadowColor: Colors.black,
+                          color: Palette.myGrey))),
+              CircularChartAnnotation(
+                  widget: Container(
+                      child: Text('$generalTotalOutgoings€',
+                          style: TextStyle(color: Colors.white, fontSize: 17))))
+            ], series: <CircularSeries>[
               RadialBarSeries<GDPData, int>(
+                  trackColor: Palette.myWhite,
                   innerRadius: "80%",
                   dataSource: _chartData,
                   pointColorMapper: (GDPData data, _) => data.color,
                   xValueMapper: (GDPData data, _) => generalTotalOutgoings,
                   yValueMapper: (GDPData data, _) => generalTotalOutgoings,
                   maximumValue: double.parse(generalTotalInbounds.toString())),
-            ],
-          ),
-        ),
+              // Radius of doughnut
+            ])),
         Text(
-          generalTotalOutgoings.toString(),
+          'Uscite',
           style: TextStyle(
             fontWeight: FontWeight.w800,
             fontSize: 18,

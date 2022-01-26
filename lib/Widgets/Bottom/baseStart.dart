@@ -7,22 +7,21 @@ class base extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          bottom: 0,
           child: Container(
             width: double.infinity,
             height: 90,
             decoration: BoxDecoration(
-              color: Palette.myBg,
+              color: Palette.myOrange,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black,
-                    blurRadius: 50,
-                    spreadRadius: 0,
-                    offset: Offset(0, 15))
+                  color: Colors.black,
+                  blurRadius: 10,
+                  blurStyle: BlurStyle.normal,
+                )
               ],
             ),
           ),

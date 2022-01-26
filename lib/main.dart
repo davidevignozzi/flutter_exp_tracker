@@ -2,6 +2,7 @@ import 'package:exp_tracker/Widgets/Bottom/start.dart';
 import 'package:exp_tracker/Widgets/Form/select.dart';
 import 'package:exp_tracker/Widgets/Table/miniTable.dart';
 import 'package:exp_tracker/Widgets/Table/table.dart';
+import 'package:exp_tracker/gloabl.dart';
 import 'Widgets/Graphs/inboundGraph.dart';
 import 'Widgets/Graphs/outgoingsGraph.dart';
 import 'package:exp_tracker/Style/palette.dart';
@@ -16,10 +17,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // changeStartToSelect() {
-  //   bool start = true;
-  // }
-
   const MyApp();
   @override
   Widget build(BuildContext context) {
@@ -64,7 +61,7 @@ class MyApp extends StatelessWidget {
               Positioned(
                 child: Container(
                   alignment: Alignment.bottomCenter,
-                  child: startBool ? selectState() : start(),
+                  child: globalStart ? selectState() : start(),
                 ),
               )
             ],

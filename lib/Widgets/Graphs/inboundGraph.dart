@@ -34,23 +34,34 @@ class _inboundGraphState extends State<inboundGraph> {
         child: Column(
       children: [
         Container(
-          width: 120,
-          height: 120,
-          child: SfCircularChart(
-            series: <CircularSeries>[
+            width: 120,
+            height: 120,
+            child: SfCircularChart(annotations: <CircularChartAnnotation>[
+              CircularChartAnnotation(
+                  widget: Container(
+                      child: PhysicalModel(
+                          shape: BoxShape.circle,
+                          elevation: 0,
+                          shadowColor: Colors.black,
+                          color: Palette.myGrey))),
+              CircularChartAnnotation(
+                  widget: Container(
+                      child: Text('$generalTotalInbounds€',
+                          style: TextStyle(color: Colors.white, fontSize: 17))))
+            ], series: <CircularSeries>[
               RadialBarSeries<GDPData, int>(
+                  trackColor: Palette.myWhite,
                   innerRadius: "80%",
                   dataSource: _chartData,
                   pointColorMapper: (GDPData data, _) => data.color,
-                  xValueMapper: (GDPData data, _) => generalTotalOutgoings,
+                  xValueMapper: (GDPData data, _) => generalTotalInbounds,
                   yValueMapper: (GDPData data, _) =>
                       generalTotalInbounds - generalTotalOutgoings,
                   maximumValue: double.parse(generalTotalInbounds.toString())),
-            ],
-          ),
-        ),
+              // Radius of doughnut
+            ])),
         Text(
-          generalTotalInbounds.toString(),
+          'Entrate',
           style: TextStyle(
             fontWeight: FontWeight.w800,
             fontSize: 18,
@@ -63,7 +74,7 @@ class _inboundGraphState extends State<inboundGraph> {
 
   List<GDPData> getChartData() {
     final List<GDPData> chartData = [
-      GDPData(generalTotalInbounds, Palette.myGreen),
+      GDPData(generalTotalInbounds - generalTotalOutgoings, Palette.myGreen),
     ];
     return chartData;
   }
