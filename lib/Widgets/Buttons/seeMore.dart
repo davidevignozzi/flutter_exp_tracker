@@ -1,5 +1,6 @@
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/gloabl.dart';
+import 'package:exp_tracker/movementList.dart';
 import 'package:flutter/material.dart';
 
 class seeMore extends StatefulWidget {
@@ -20,6 +21,7 @@ class _seeState extends State<seeMore> {
           setState(() {
             globalTable = true;
           });
+          orderList();
         },
       ),
     );

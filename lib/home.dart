@@ -1,3 +1,4 @@
+import 'package:exp_tracker/Style/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -32,48 +33,50 @@ class _homeState extends State<home> {
   }
 
   Widget build(BuildContext context) {
-    return Container(
-      child: globalTable == false
-          ? Stack(
-              children: [
-                Positioned(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(bottom: 47),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [inboundGraph(), outgoingGraph()],
-                        ),
-                      ),
-                      // --------------------------------------------------------- Title
-                      Container(
-                        child: title(),
-                        alignment: Alignment.center,
-                        margin: EdgeInsets.only(bottom: 20),
-                      ),
-                      // --------------------------------------------------------- Table
+    return Scaffold(
+        backgroundColor: globalTable == false ? Palette.myBg : Colors.white,
+        body: globalTable == false
+            ? SafeArea(
+                bottom: false,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(bottom: 47),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [inboundGraph(), outgoingGraph()],
+                            ),
+                          ),
+                          // --------------------------------------------------------- Title
+                          Container(
+                            child: title(),
+                            alignment: Alignment.center,
+                            margin: EdgeInsets.only(bottom: 20),
+                          ),
+                          // --------------------------------------------------------- Table
 
-                      Container(
-                        child: miniTable(),
+                          Container(
+                            child: miniTable(),
+                            alignment: Alignment.bottomCenter,
+                            margin: EdgeInsets.only(bottom: 250),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // --------------------------------------------------------------- Base
+                    Positioned(
+                      child: Container(
                         alignment: Alignment.bottomCenter,
-                        margin: EdgeInsets.only(bottom: 250),
+                        child: globalStart == true ? start() : selectState(),
                       ),
-                    ],
-                  ),
-                ),
-
-                // --------------------------------------------------------------- Base
-                Positioned(
-                  child: Container(
-                    alignment: Alignment.bottomCenter,
-                    child: globalStart == true ? start() : selectState(),
-                  ),
-                )
-              ],
-            )
-          : table(),
-    );
+                    )
+                  ],
+                ))
+            : table());
   }
 }

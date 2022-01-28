@@ -14,15 +14,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var startBool = true;
-    return MaterialApp(
-      title: 'Expance Tracker',
-      home: Scaffold(
-        backgroundColor: Palette.myBg,
-        body: SafeArea(
-          bottom: false,
-          child: home(),
-        ),
-      ),
-    );
+    return MaterialApp(title: 'Expance Tracker', home: home());
   }
 }
