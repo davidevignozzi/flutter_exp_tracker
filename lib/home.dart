@@ -1,5 +1,4 @@
 import 'package:exp_tracker/Style/palette.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 

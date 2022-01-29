@@ -66,14 +66,6 @@ class _addMovementState extends State<addMovement> {
       if (movementToAdd.inbound == false && movementToAdd.outgoing == true) {
         outgoings.add(movementToAdd);
       }
-
-      //add to mini list
-      if (miniList.length >= 3) {
-        miniList.removeAt(0);
-        miniList.add(movementToAdd);
-      } else {
-        miniList.add(movementToAdd);
-      }
     });
 
     getTotalInbounds();
@@ -83,11 +75,9 @@ class _addMovementState extends State<addMovement> {
   // get total inbounds
   void getTotalInbounds() {
     setState(() {
-      if (movementsList.last.importParsed != null) {
-        if (movementsList.last.inbound == true) {
-          generalTotalInbounds +=
-              int.parse(movementsList.last.importParsed.toString());
-        }
+      if (movementsList.last.inbound == true) {
+        generalTotalInbounds +=
+            int.parse(movementsList.last.importParsed.toString());
       }
     });
   }
@@ -95,11 +85,9 @@ class _addMovementState extends State<addMovement> {
   // get total outgoings
   void getTotaloutgoings() {
     setState(() {
-      if (movementsList.last.importParsed != null) {
-        if (movementsList.last.outgoing == true) {
-          generalTotalOutgoings +=
-              int.parse(movementsList.last.importParsed.toString());
-        }
+      if (movementsList.last.outgoing == true) {
+        generalTotalOutgoings +=
+            int.parse(movementsList.last.importParsed.toString());
       }
     });
   }

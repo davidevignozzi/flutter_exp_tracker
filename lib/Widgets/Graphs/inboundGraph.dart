@@ -46,7 +46,10 @@ class _inboundGraphState extends State<inboundGraph> {
               CircularChartAnnotation(
                   widget: Container(
                       child: Text('$generalTotalInbounds€',
-                          style: TextStyle(color: Colors.white, fontSize: 17))))
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600))))
             ], series: <CircularSeries>[
               RadialBarSeries<GDPData, int>(
                   trackColor: Palette.myWhite,

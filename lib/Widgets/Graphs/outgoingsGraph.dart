@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:exp_tracker/Style/palette.dart';
 import 'package:exp_tracker/gloabl.dart';
-import 'package:exp_tracker/movementList.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -47,7 +46,10 @@ class _ougoingGraphState extends State<outgoingGraph> {
               CircularChartAnnotation(
                   widget: Container(
                       child: Text('$generalTotalOutgoings€',
-                          style: TextStyle(color: Colors.white, fontSize: 17))))
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600))))
             ], series: <CircularSeries>[
               RadialBarSeries<GDPData, int>(
                   trackColor: Palette.myWhite,

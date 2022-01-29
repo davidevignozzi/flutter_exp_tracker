@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:exp_tracker/movement.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../Style/palette.dart';
@@ -17,6 +15,17 @@ class _itemState extends State<item> {
   void initState() {
     timer = Timer.periodic(Duration(seconds: 1), (_) {
       setState(() {});
+      // order list
+      movementsList.sort((b, a) => a.dateParsed.compareTo(b.dateParsed));
+      setState(() {
+        // order miniList
+        if (movementsList.length > 0 && movementsList.length <= 3) {
+          miniList = movementsList;
+        }
+        if (movementsList.length > 3) {
+          miniList = movementsList.sublist(0, 3);
+        }
+      });
     });
   }
 

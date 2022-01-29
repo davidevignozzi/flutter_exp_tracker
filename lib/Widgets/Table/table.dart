@@ -1,7 +1,6 @@
 import 'package:exp_tracker/Widgets/Buttons/close.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:exp_tracker/gloabl.dart';
 
 import '../../Style/palette.dart';
 import '../../movementList.dart';

@@ -9,7 +9,6 @@ class formImport extends StatefulWidget {
 
 class formImportState extends State<formImport> {
   final controller = TextEditingController();
-  var _import;
 
   void dispose() {
     controller.dispose();
@@ -35,7 +34,6 @@ class formImportState extends State<formImport> {
           setImport(controller.text);
           if (generalImportParsed is int) {
             print(generalImport);
-            print(generalImportParsed);
           }
         },
         textInputAction: TextInputAction.search,
