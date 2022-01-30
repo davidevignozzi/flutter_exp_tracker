@@ -24,6 +24,7 @@ class _tableState extends State<table> {
     timer?.cancel();
   }
 
+// TODO REMOVE ITEMS
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
