@@ -45,7 +45,7 @@ class _inboundGraphState extends State<inboundGraph> {
                           color: Palette.myGrey))),
               CircularChartAnnotation(
                   widget: Container(
-                      child: Text('$generalTotalInbounds€',
+                      child: Text('$generalTotal€',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 17,

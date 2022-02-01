@@ -30,15 +30,16 @@ class formImportState extends State<formImport> {
       height: 53,
       child: TextFormField(
         controller: controller,
+        keyboardType:
+            TextInputType.numberWithOptions(decimal: true, signed: true),
+        textInputAction: TextInputAction.done,
         onEditingComplete: () {
+          FocusManager.instance.primaryFocus?.unfocus();
           setImport(controller.text);
           if (generalImportParsed is int) {
             print(generalImport);
           }
         },
-        textInputAction: TextInputAction.search,
-        keyboardType: TextInputType.number,
-        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           filled: true,

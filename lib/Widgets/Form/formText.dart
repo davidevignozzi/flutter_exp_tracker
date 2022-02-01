@@ -25,8 +25,9 @@ class formTextState extends State<formText> {
     return Container(
       child: TextFormField(
         controller: controller,
-        textInputAction: TextInputAction.search,
+        textInputAction: TextInputAction.done,
         onEditingComplete: () {
+          FocusManager.instance.primaryFocus?.unfocus();
           setName(controller.text);
           print(generalName);
         },

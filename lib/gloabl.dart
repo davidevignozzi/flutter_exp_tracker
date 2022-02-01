@@ -5,8 +5,8 @@ var generalImport;
 var generalImportParsed;
 var generalInbound;
 var generalOutgoing;
-var generalTotal;
 
+var generalTotal = 0;
 var generalTotalInbounds = 0;
 var generalTotalOutgoings = 0;
 
