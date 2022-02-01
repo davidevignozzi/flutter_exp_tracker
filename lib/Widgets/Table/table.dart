@@ -57,10 +57,6 @@ class _tableState extends State<table> {
                       itemBuilder: (BuildContext context, int index) {
                         final item = movementsList[index];
                         return Dismissible(
-                          // secondaryBackground: Container(
-                          //   color: Palette.myRed,
-                          //   child: Icon(Icons.delete),
-                          // ),
                           background: Container(
                             child: Container(
                               margin: EdgeInsets.only(right: 30),
@@ -83,6 +79,7 @@ class _tableState extends State<table> {
                               if (item.inbound == true) {
                                 generalTotalInbounds =
                                     generalTotalInbounds - item.importParsed;
+                                generalTotal = generalTotal - item.importParsed;
                                 for (var mov in inbounds) {
                                   if (item == mov) {
                                     inbounds.remove(mov);
@@ -96,6 +93,7 @@ class _tableState extends State<table> {
                               if (item.outgoing == true) {
                                 generalTotalOutgoings =
                                     generalTotalOutgoings - item.importParsed;
+                                generalTotal = generalTotal + item.importParsed;
                                 for (var mov in outgoings) {
                                   if (item == mov) {
                                     outgoings.remove(mov);

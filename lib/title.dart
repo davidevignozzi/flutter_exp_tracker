@@ -5,7 +5,7 @@ class title extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        'I Tuoi movimenti',
+        'I tuoi movimenti',
         style: TextStyle(
           color: Colors.white,
           fontSize: 26,
