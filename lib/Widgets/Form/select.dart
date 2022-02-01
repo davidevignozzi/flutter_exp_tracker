@@ -40,6 +40,7 @@ class select extends State<selectState> {
       width: double.infinity,
       // if something is selected change heigth
       height: inboundSelected || outgoingSelected ? 475 : 190,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: Palette.myBg,
         borderRadius: BorderRadius.only(
@@ -54,77 +55,88 @@ class select extends State<selectState> {
               offset: Offset(0, 0))
         ],
       ),
-      child: Column(
-        children: [
-          // ------------------------------------------------------------------- Arrow button
-          arrow(),
-          Container(
-            margin: EdgeInsets.only(top: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                // ------------------------------------------------------------- INBOUND
-                Container(
-                  width: 122.0,
-                  height: 52.0,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 15,
-                          spreadRadius: -7,
-                          offset: Offset(5, 7))
-                    ],
-                  ),
-                  child: ElevatedButton(
-                    onPressed: inboundPressed,
-                    child: Text("Entrate"),
-                    style: ElevatedButton.styleFrom(
-                      primary: inboundSelected ? Palette.myGreen : Palette.myBg,
-                      onPrimary:
-                          inboundSelected ? Palette.myBg : Palette.myGreen,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            // ------------------------------------------------------------------- Arrow button
+            arrow(),
+            Container(
+              margin: EdgeInsets.only(top: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // ------------------------------------------------------------- INBOUND
+                  Container(
+                    width: 122.0,
+                    height: 52.0,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 15,
+                            spreadRadius: -7,
+                            offset: Offset(5, 7))
+                      ],
+                    ),
+                    child: ElevatedButton(
+                      onPressed: inboundPressed,
+                      child: Text(
+                        "Entrate",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary:
+                            inboundSelected ? Palette.myGreen : Palette.myBg,
+                        onPrimary:
+                            inboundSelected ? Palette.myBg : Palette.myGreen,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
-                ),
 
-                //-------------------------------------------------------------- OUTGOING
-                Container(
-                  width: 122.0,
-                  height: 52.0,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 15,
-                          spreadRadius: -7,
-                          offset: Offset(5, 7))
-                    ],
-                  ),
-                  child: ElevatedButton(
-                    onPressed: outgoingPressed,
-                    child: Text("Ucite"),
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                          outgoingSelected ? Palette.myOrange : Palette.myBg,
-                      onPrimary:
-                          outgoingSelected ? Palette.myBg : Palette.myOrange,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                  //-------------------------------------------------------------- OUTGOING
+                  Container(
+                    width: 122.0,
+                    height: 52.0,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 15,
+                            spreadRadius: -7,
+                            offset: Offset(5, 7))
+                      ],
+                    ),
+                    child: ElevatedButton(
+                      onPressed: outgoingPressed,
+                      child: Text(
+                        "Uscite",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary:
+                            outgoingSelected ? Palette.myOrange : Palette.myBg,
+                        onPrimary:
+                            outgoingSelected ? Palette.myBg : Palette.myOrange,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
 
-          // if something is selected show form
-          inboundSelected ? Container(child: form()) : Container(),
-          outgoingSelected ? Container(child: form()) : Container(),
-        ],
+            // if something is selected show form
+            inboundSelected ? Container(child: form()) : Container(),
+            outgoingSelected ? Container(child: form()) : Container(),
+          ],
+        ),
       ),
     );
   }
