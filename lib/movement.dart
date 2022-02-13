@@ -1,5 +1,4 @@
 class Movement {
-  // Movement({name, date, import, inbound, outgoing});
   Movement({
     required this.name,
     required this.date,
